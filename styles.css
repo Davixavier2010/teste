@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600;1,700&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  --bg-dark: #0c0e12;
+  --bg-surface: #14171d;
+  --bg-card: #181b22;
+  --gold-primary: #f5b324;
+  --gold-hover: #e09f16;
+  --gold-light: #fde68a;
+  --text-muted: #9aa1ad;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-dark);
+  color: #f3f4f6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.font-serif-accent {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-grotesk {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom Chalkboard & Doodle Pattern Background */
+.hero-chalk-bg {
+  background-color: #0b0d11;
+  background-image: 
+    radial-gradient(circle at 75% 35%, rgba(245, 179, 36, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(245, 179, 36, 0.05) 0%, transparent 40%),
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' opacity='0.035'%3E%3Cpath d='M60 20c-8 0-15 7-15 15v10c0 8 7 15 15 15s15-7 15-15V35c0-8-7-15-15-15zm-20 60c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm70 0c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10z' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: cover, cover, 140px 140px;
+}
+
+/* Artistic Chalk Coffee Illustration Overlay */
+.chalkboard-art {
+  position: absolute;
+  right: -5%;
+  top: 10%;
+  width: 55%;
+  height: 80%;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' fill='none' stroke='%23ffffff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Coffee Cup Outline --%3E%3Cpath d='M250 250 C250 180 550 180 550 250' stroke-dasharray='12 8'/%3E%3Cpath d='M200 300 C200 500 240 600 400 600 C560 600 600 500 600 300 Z' /%3E%3Cpath d='M600 350 C680 350 680 470 600 470' stroke-width='6'/%3E%3Cpath d='M160 620 C240 650 560 650 640 620' stroke-width='5'/%3E%3C!-- Steam Curves --%3E%3Cpath d='M340 220 Q320 160 350 110 T330 40' stroke-dasharray='8 6' stroke-width='3'/%3E%3Cpath d='M400 210 Q420 150 390 100 T420 30' stroke-dasharray='8 6' stroke-width='3'/%3E%3Cpath d='M460 220 Q440 160 470 110 T450 40' stroke-dasharray='8 6' stroke-width='3'/%3E%3C!-- Coffee Beans --%3E%3Cellipse cx='680' cy='180' rx='45' ry='30' transform='rotate(-30 680 180)' stroke-width='4'/%3E%3Cpath d='M650 170 Q680 190 710 175' stroke-width='3'/%3E%3Cellipse cx='150' cy='450' rx='40' ry='25' transform='rotate(40 150 450)' stroke-width='4'/%3E%3Cpath d='M125 445 Q150 460 175 440' stroke-width='3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.05));
+}
+
+/* Left Vertical Bar Text */
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.25em;
+  font-size: 0.72rem;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+/* Golden Accent Utilities */
+.text-gold {
+  color: var(--gold-primary);
+}
+
+.bg-gold {
+  background-color: var(--gold-primary);
+}
+
+.bg-gold:hover {
+  background-color: var(--gold-hover);
+}
+
+.border-gold {
+  border-color: var(--gold-primary);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(245, 179, 36, 0.25);
+}
+
+.glow-gold-subtle {
+  box-shadow: 0 4px 20px -2px rgba(245, 179, 36, 0.2);
+}
+
+/* Smooth glass effect */
+.glass-nav {
+  background: rgba(12, 14, 18, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-card {
+  background: rgba(24, 27, 34, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Animations */
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.pulse-indicator {
+  animation: pulseSubtle 3s infinite ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0e12;
+}
+::-webkit-scrollbar-thumb {
+  background: #272a33;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f5b324;
+}
+
